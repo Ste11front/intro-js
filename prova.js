@@ -10,3 +10,6 @@ console.log('Prova');
 // console.log(typeof'bollito \'\\loco\' \n caldisssimo'); 
 
 // console.log(1 == 2);     // == => =     != => diverso
+
+// console.log(true && false);  // => ||
+
