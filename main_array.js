@@ -174,21 +174,68 @@ console.log('array');
 
 // ESERCIZI-------------------------------------------------
 
-const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
 // 1) mapping function che prende in input un array di numeri
 //    e restituisce un array con tutti i numeri diminuiti di uno
 
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const decreasedNumbersArray = [];
+
+// for (let i = 0; i < numbersArray.length; i++) {
+//     decreasedNumbersArray.push(numbersArray[i] - 1);
+// }
+
+// console.log(decreasedNumbersArray);
+
 // 2) mapping function che prende in input un array di numeri
 //    e restituisce un array con i il valore assoluto dei numeri
+
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const absoluteNumbersArray = [];
+
+// for (let i = 0; i < numbersArray.length; i++) {
+//     if (numbersArray[i] < 0) {
+//         absoluteNumbersArray.push(-numbersArray[i]);
+//     } else {
+//         absoluteNumbersArray.push(numbersArray[i]);
+//     }
+// }
+
+// console.log(absoluteNumbersArray);
 
 // 3) mapping function che prende in input un array di numeri
 //    e restituisce un array di strighe con scritto 'PARI' se il numero
 //    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
 
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const evenOrOdd = [];
+
+// for (let i = 0; i < numbersArray.length; i++) {
+//     if (numbersArray[i] % 2 === 0) {
+//         evenOrOdd.push('PARI');
+//     } else {
+//         evenOrOdd.push('DISPARI');
+//     }
+// }
+
+// console.log(evenOrOdd);
+
 // 4) mapping function che prende in input un array di stringhe
 //    e le restituisce tutte minuscole
+
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+function convertiInMinuscolo(stringsArray) {
+    let risultato = [];
+    for (let i = 0; i < stringsArray.length; i++) {
+      risultato[i] = stringsArray[i].toLowerCase();
+    }
+    return risultato;
+  }
+  
+  console.log(convertiInMinuscolo(stringsArray));
 
 // 5) mapping function che prende in input un array di strighe
 //    e restituisce un array di numeri con le lunghezze delle stringhe
