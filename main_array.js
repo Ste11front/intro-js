@@ -1,90 +1,91 @@
 console.log('array');
-// ARRAY-------------------------------------------------
+// ARRAY---------------------------------------
 
-// const batman = ['pane', 'pasta', 'latte', 'caffè'];
+// const pippo = ['pane', 'pasta', 'latte', 'caffè'];
 
-// console.log(batman);
+//console.log(pippo);
 
-// console.log(batman.length);
+//console.log(pippo.length);
 
-// AGGIUNGERE e TOGLIERE ELEMENTI------------------------
+// AGGIUNGERE E TOGLIERE ELEMENTI--------
 
-// batman.push('acqua');  // Aggiungere in coda
+// pippo.push('acqua'); // aggiungere in coda
 
-// batman.unshift('biscotti'); // Aggiungere in testa
+// pippo.unshift('biscotti'); // aggiungere in testa
 
-// const elementoCoda = batman.pop()  // Togliere in coda
+
+// const elementoCoda = pippo.pop() // togliere in coda;
 
 // console.log(elementoCoda);
 
-// const elementoTesta = batman.shift()  // Togliere in Testa
+// const elementoTesta = pippo.shift() // togliere in testa;
 
 // console.log(elementoTesta);
 
-// console.log(batman);
+// console.log(pippo);
 
-// CICLI ed ARRAY-----------------------------------------
 
-// const batman = [1, 2, 23, -4, 345, 0];
+//CICLI ED ARRAY-------------------------
 
-// console.log(batman)[0];  // Mi da il numero 1
+// const pluto = [1, 2, 23, -4, 345, 0];
 
-// console.log(batman)[2];  // Da il numnero  23
+// console.log(pluto[0]);
 
-// console.log(batman)[batman.length - 1];  // Da l'ultimo numero
+// console.log(pluto[2]);
 
-// for (let i = 0; i < batman.length; i++) {
-//     const element = batman[i];
+// console.log(pluto[pluto.length - 1]);
+
+// for (let i = 0; i < pluto.length; i++) {
+//     const element = pluto[i];
 //     console.log(element);
-    
 // }
 
-// for (const element of batman) {
+// for (const element of pluto) {
 //     console.log(element);
-    
 // }
 
 // let i = 0;
-// while (i < batman.length) {
-//     const element = batman[i];
+// while (i < pluto.length) {
+//     const element = pluto[i];
 //     console.log(element);
-//     i++
+//     i++;
 // }
 
-// for (let i = batman.length - 1; i >= 0; i--) {
-//     const element = batman[i];
-
-//     console.log(element); 
+// for (let i = pluto.length - 1; i >= 0; i--) {
+//     const element = pluto[i];
+//     console.log(element);
 // }
 
-// TRASFORMAZIONI DI ARRAY---------------------------------------
-//MAPPING
+// TRASFORMAZIONI DI ARRAY-------------------
+// MAPPING
 
-const joker = [2, 5, -4, 2000, 7, 34];               
+// const paperino = [2, 5, -4, 2000, 7, 34];
 
-// function multiplyArrayby2(selectedArray) {          // Esempio 1
+// function multiplyArrayBy2(selectedArray){
 
 //     const newArray = [];
 
 //     for (let i = 0; i < selectedArray.length; i++) {
 //         const element = selectedArray[i];
+
 //         const newElement = element * 2;
+
 //         newArray.push(newElement);
 //     }
-    
+
 //     return newArray;
 // }
 
-// console.log(multiplyArrayby2(joker));
+// console.log('multiply by 2', multiplyArrayBy2(paperino));
 
-// function devidedBy2ifeven(selectedArray) {            // Esempio 2
- // const newArray = [];
-// for (let i = 0; i < selectedArray.length; i++) {
-//     const element = selectedArray[i];
-
-//     let newElement;
-//     if (element % 2 === 0) {
-//         newElement = element / 2;
+// function divideBy2ifEven(selectedArray){
+//     const newArray = [];
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
+        
+//         let newElement;
+//         if (element % 2 === 0) {
+//             newElement = element / 2;
 //         } else {
 //             newElement = element;
 //         }
@@ -93,47 +94,115 @@ const joker = [2, 5, -4, 2000, 7, 34];
 //     }
 //     return newArray;
 // }
-// console.log(devidedBy2ifeven(joker));  
-    
-// --------------------------------------
 
-// const goku = ['super', 'saiyan', '4'];
+// console.log('divide by 2 if even', divideBy2ifEven(paperino));
 
-// function upperCaseAll(selectedArray) {
-        
-//     const newArray = []
+
+// const paperone = ['qui', 'quo', 'qua'];
+
+// function upperCaseAll(selectedArray){
+
+//     const newArray = [];
 //     for (let i = 0; i < selectedArray.length; i++) {
+        
 //         const element = selectedArray[i];
-            
-//         const newElement = element.toUppercase();
+        
+//         const newElement = element.toUpperCase();
+
 //         newArray.push(newElement);
 //     }
 //     return newArray;
 // }
-// console.log(upperCaseAll(goku));
 
-// FILTERING------------------------------------------------------
+// console.log('UpperCaseAll', upperCaseAll(paperone));
 
-// const paperoga = [3, 5, 6, 9, 11, -3, 8]
-// const newArray = [];
 
-// function removeEven(selectedArray) {
+//FILTERING
+
+// const paperoga = [3, 5, 6, 9, 8 , 111, -3, -8, 0];
+
+// function removeEven(selectedArray){
+
+//     const newArray = [];
 //     for (let i = 0; i < selectedArray.length; i++) {
+        
 //         const element = selectedArray[i];
-
-//         if (Element ) {
-            
+        
+//         if(element % 2 !== 0){
+//             newArray.push(element);
 //         }
+
 //     }
+//     return newArray;
 // }
 
-// FUNCTION COMPOSITION------------------------------------------------
+// console.log('remove even', removeEven(paperoga));
 
-const qui = [3, 5, 6, 9, 8, 111, -3, -8, 20, -1000];
+// function removeNegative(selectedArray){
+//     const newArray = [];
+//     for (let i = 0; i < selectedArray.length; i++) {
+        
+//         const element = selectedArray[i];
+        
+//         if(element >= 0){
+//             newArray.push(element);
+//         }
 
-function removeNegativeAndMultiplyby2(selectedArray) {
+//     }
+//     return newArray;
+// }
 
- return multiplyArrayby2(removeNegative(selectedArray));
-}
+// // console.log('remove negative', removeNegative(paperoga));
 
-console.log(removeNegativeAndMultiplyby2(qui));
+// // FUNCTION COMPOSITION
+
+// const qui = [3, 5, 6, 9, 8 , 111, -3, -8, 0, 20, -10000];
+
+// function removeNegativeAndMultiplyBy2(selectedArray){
+
+//     // const arrayWithoutNegative = removeNegative(selectedArray);
+//     // const arrayMultiplied = multiplyArrayBy2(arrayWithoutNegative);
+
+//     // return arrayMultiplied;
+
+//     return multiplyArrayBy2(removeNegative(selectedArray));
+// }
+
+// console.log(removeNegativeAndMultiplyBy2(qui));
+
+
+
+// ESERCIZI-------------------------------------------------
+
+const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+// 1) mapping function che prende in input un array di numeri
+//    e restituisce un array con tutti i numeri diminuiti di uno
+
+// 2) mapping function che prende in input un array di numeri
+//    e restituisce un array con i il valore assoluto dei numeri
+
+// 3) mapping function che prende in input un array di numeri
+//    e restituisce un array di strighe con scritto 'PARI' se il numero
+//    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+
+// 4) mapping function che prende in input un array di stringhe
+//    e le restituisce tutte minuscole
+
+// 5) mapping function che prende in input un array di strighe
+//    e restituisce un array di numeri con le lunghezze delle stringhe
+
+// 6) mapping function che prende in input un array di strighe
+//    e restituisce le stringhe in formato camelCase
+
+// 7) filter function che prende in input un array di stringhe
+//    e restituisce solo quelle più lunghe di tre caratteri
+
+// 8) filter function che prende in input un array di strighe
+//    e restituisce solo quelle che contengono la lettera 'p'
+
+// 9) filter function che prende in input un array di numeri
+//    e restituisce i positivi divisibili per 3
+
+// 10) fare una copia della home del sito di AXIA FORMAZIONE
