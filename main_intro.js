@@ -258,19 +258,19 @@ console.log('hello world!')
 
 // switch control flow--------------------------------
 
-const rapunzel = prompt('inserisci FIZZ, BUZZ o FIZZBUZZ')
+// const rapunzel = prompt('inserisci FIZZ, BUZZ o FIZZBUZZ')
 
-switch (rapunzel) {
-    case 'FIZZ':
-        alert('vuoi un numero divisibile per tre');
-        break;
-    case 'BUZZ':
-        alert('vuoi un numero divisibile per cinque');
-        break;
-    case 'FIZZBUZZ':
-        alert('vuoi un numero divisibile per tre e per cinque');
-        break;
-    default:
-        alert('hai sbagliato ad inserire la parola');
-        break;
-}
+// switch (rapunzel) {
+//     case 'FIZZ':
+//         alert('vuoi un numero divisibile per tre');
+//         break;
+//     case 'BUZZ':
+//         alert('vuoi un numero divisibile per cinque');
+//         break;
+//     case 'FIZZBUZZ':
+//         alert('vuoi un numero divisibile per tre e per cinque');
+//         break;
+//     default:
+//         alert('hai sbagliato ad inserire la parola');
+//         break;
+// }
