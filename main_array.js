@@ -206,7 +206,7 @@ console.log('array');
 // console.log(absoluteNumbersArray);
 
 // 3) mapping function che prende in input un array di numeri
-//    e restituisce un array di strighe con scritto 'PARI' se il numero
+//    e restituisce un array di stringhe con scritto 'PARI' se il numero
 //    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
 
 // const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
@@ -225,31 +225,92 @@ console.log('array');
 // 4) mapping function che prende in input un array di stringhe
 //    e le restituisce tutte minuscole
 
-const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
-function convertiInMinuscolo(stringsArray) {
-    let risultato = [];
-    for (let i = 0; i < stringsArray.length; i++) {
-      risultato[i] = stringsArray[i].toLowerCase();
-    }
-    return risultato;
-  }
+// function convertiInMinuscolo(stringsArray) {
+//     let risultato = [];
+//     for (let i = 0; i < stringsArray.length; i++) {
+//       risultato[i] = stringsArray[i].toLowerCase();
+//     }
+//     return risultato;
+//   }
   
-  console.log(convertiInMinuscolo(stringsArray));
+//   console.log(convertiInMinuscolo(stringsArray));
 
-// 5) mapping function che prende in input un array di strighe
+// 5) mapping function che prende in input un array di stringhe
 //    e restituisce un array di numeri con le lunghezze delle stringhe
 
-// 6) mapping function che prende in input un array di strighe
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const lengthsArray = [];
+
+// for (let i = 0; i < stringsArray.length; i++) {
+//   lengthsArray.push(stringsArray[i].length);
+// }
+
+// console.log(lengthsArray); // [2, 5, 5, 11, 7, 0, 9]
+
+// 6) mapping function che prende in input un array di stringhe
 //    e restituisce le stringhe in formato camelCase
+
+// // array di stringhe
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+// // array vuoto dove pushare le stringhe in formato camelCase
+// const camelCaseArray = [];
+
+// // ciclo for per iterare sull'array di stringhe
+// for (let i = 0; i < stringsArray.length; i++) {
+//   // trasformo la stringa in minuscolo e la divido in un array di parole
+//   let string = stringsArray[i].toLowerCase().split(' ');
+//   // ciclo for per iterare sull'array di parole
+//   for (let j = 0; j < string.length; j++) {
+//     // trasformo la prima lettera della parola in maiuscolo e concateno il resto della parola
+//     string[j] = string[j].charAt(0).toUpperCase() + string[j].slice(1);
+//   }
+//   // pusho la parola in formato camelCase nell'array vuoto
+//   camelCaseArray.push(string.join(''));
+// }
+
+// console.log(camelCaseArray); // ["23", "Pippo", "Pluto", "LaCasaBlu", "Osvaldo", "", "Porchetta"]
 
 // 7) filter function che prende in input un array di stringhe
 //    e restituisce solo quelle più lunghe di tre caratteri
 
-// 8) filter function che prende in input un array di strighe
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const filteredArray = [];
+
+// for (let i = 0; i < stringsArray.length; i++) {
+//   if (stringsArray[i].length > 3) {
+//     filteredArray.push(stringsArray[i]);
+//   }
+// }
+
+// console.log(filteredArray); // ["PIPPO", "pluto", "la CASA blu", "Osvaldo", "porchetta"]
+
+// 8) filter function che prende in input un array di stringhe
 //    e restituisce solo quelle che contengono la lettera 'p'
+
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const filteredArray = [];
+// for (let i = 0; i < stringsArray.length; i++) {
+//   if (stringsArray[i].indexOf('p') !== -1) {
+//     filteredArray.push(stringsArray[i]);
+//   }
+// }
+// console.log(filteredArray);
 
 // 9) filter function che prende in input un array di numeri
 //    e restituisce i positivi divisibili per 3
+
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// let result = [];
+
+// for (let i = 0; i < numbersArray.length; i++) {
+//     if (numbersArray[i] > 0 && numbersArray[i] % 3 === 0) {
+//         result.push(numbersArray[i]);
+//     }
+// }
+
+// console.log(result);
 
 // 10) fare una copia della home del sito di AXIA FORMAZIONE
