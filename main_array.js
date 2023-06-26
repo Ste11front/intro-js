@@ -184,10 +184,12 @@ console.log('array');
 // const decreasedNumbersArray = [];
 
 // for (let i = 0; i < numbersArray.length; i++) {
-//     decreasedNumbersArray.push(numbersArray[i] - 1);
+//      const element = numberArray [i] - 1;
+//      decreasedNumbersArray.push(Element);
 // }
+// return decreasedNumbersArray;
 
-// console.log(decreasedNumbersArray);
+//  console.log(decreasedNumbersArray);
 
 // 2) mapping function che prende in input un array di numeri
 //    e restituisce un array con i il valore assoluto dei numeri
@@ -196,12 +198,7 @@ console.log('array');
 // const absoluteNumbersArray = [];
 
 // for (let i = 0; i < numbersArray.length; i++) {
-//     if (numbersArray[i] < 0) {
-//         absoluteNumbersArray.push(-numbersArray[i]);
-//     } else {
-//         absoluteNumbersArray.push(numbersArray[i]);
-//     }
-// }
+//     const element = numbersArray
 
 // console.log(absoluteNumbersArray);
 
