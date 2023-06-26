@@ -1,4 +1,3 @@
-console.log('array');
 // ARRAY---------------------------------------
 
 // const pippo = ['pane', 'pasta', 'latte', 'caffè'];
