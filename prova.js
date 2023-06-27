@@ -42,11 +42,3 @@ console.log('Prova');
 // } else {
 //     console.log('Non è nemmeno un numero!');
 // }
-
-// let num = 0
-// while (num <= 11) {
-//     num = num + 3;
-//     console.log(num);
-// }
-
-// main_array es, object

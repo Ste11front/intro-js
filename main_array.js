@@ -173,140 +173,269 @@
 
 // ESERCIZI-------------------------------------------------
 
-// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
 // 1) mapping function che prende in input un array di numeri
 //    e restituisce un array con tutti i numeri diminuiti di uno
 
-// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-// const decreasedNumbersArray = [];
+function minusOneAll(arrayOfNumbers){
 
-// for (let i = 0; i < numbersArray.length; i++) {
-//      const element = numberArray [i] - 1;
-//      decreasedNumbersArray.push(Element);
-// }
-// return decreasedNumbersArray;
+    const tempArray = [];
 
-//  console.log(decreasedNumbersArray);
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+
+        const element = arrayOfNumbers[i];
+        
+        const newElement = element - 1;
+
+        tempArray.push(newElement);
+        
+    }
+
+    return tempArray;
+
+    // for (let i = 0; i < arrayOfNumbers.length; i++) {
+        
+    //     arrayOfNumbers[i] = arrayOfNumbers[i] -1
+        
+    // }
+
+    // return arrayOfNumbers;
+}
+
+console.log(minusOneAll(numbersArray));
 
 // 2) mapping function che prende in input un array di numeri
 //    e restituisce un array con i il valore assoluto dei numeri
 
-// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-// const absoluteNumbersArray = [];
+function absoluteAll(arrayOfNumbers){
 
-// for (let i = 0; i < numbersArray.length; i++) {
-//     const element = numbersArray
+    const tempArray = [];
 
-// console.log(absoluteNumbersArray);
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+
+        const element = arrayOfNumbers[i];
+        
+        //inserire il codice quì
+        const newElement = Math.abs(element);
+        //
+
+        tempArray.push(newElement);
+        
+    }
+
+    return tempArray;
+
+}
+
+console.log(absoluteAll(numbersArray));
 
 // 3) mapping function che prende in input un array di numeri
-//    e restituisce un array di stringhe con scritto 'PARI' se il numero
+//    e restituisce un array di strighe con scritto 'PARI' se il numero
 //    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
 
-// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-// const evenOrOdd = [];
+function arrayToEvenOrOddStrings(arrayOfNumbers){
 
-// for (let i = 0; i < numbersArray.length; i++) {
-//     if (numbersArray[i] % 2 === 0) {
-//         evenOrOdd.push('PARI');
-//     } else {
-//         evenOrOdd.push('DISPARI');
-//     }
-// }
+    const tempArray = [];
 
-// console.log(evenOrOdd);
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+
+        const element = arrayOfNumbers[i];
+        
+        //inserire il codice quì
+        let newElement;
+        if (element % 2 === 0) {
+            newElement = 'PARI'
+        } else {
+            newElement = 'DISPARI'
+        }
+
+        tempArray.push(newElement);
+        
+    }
+
+    return tempArray;
+
+}
+
+console.log(arrayToEvenOrOddStrings(numbersArray));
 
 // 4) mapping function che prende in input un array di stringhe
 //    e le restituisce tutte minuscole
 
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+function toLowerCaseAll(arrayOfStrings){
 
-// function convertiInMinuscolo(stringsArray) {
-//     let risultato = [];
-//     for (let i = 0; i < stringsArray.length; i++) {
-//       risultato[i] = stringsArray[i].toLowerCase();
-//     }
-//     return risultato;
-//   }
-  
-//   console.log(convertiInMinuscolo(stringsArray));
+    const tempArray = [];
 
-// 5) mapping function che prende in input un array di stringhe
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+
+        const element = arrayOfStrings[i];
+        
+        //inserire il codice quì
+        const newElement = element.toLowerCase();
+
+    
+        tempArray.push(newElement);
+        
+    }
+
+    return tempArray;
+
+}
+
+//console.log(toLowerCaseAll(stringsArray));
+
+// 5) mapping function che prende in input un array di strighe
 //    e restituisce un array di numeri con le lunghezze delle stringhe
 
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
-// const lengthsArray = [];
+function fromStringArrayToLenghtArray(arrayOfStrings){
 
-// for (let i = 0; i < stringsArray.length; i++) {
-//   lengthsArray.push(stringsArray[i].length);
-// }
+    const tempArray = [];
 
-// console.log(lengthsArray); // [2, 5, 5, 11, 7, 0, 9]
+    for (let i = 0; i < arrayOfStrings.length; i++) {
 
-// 6) mapping function che prende in input un array di stringhe
+        const element = arrayOfStrings[i];
+        
+        //inserire il codice quì
+        let newElement;
+        if (element === undefined) {
+            newElement = -1;
+            console.log('ALLARME!!')
+        } else {
+            newElement = element.length;
+        }
+        
+        tempArray.push(newElement);
+    }
+
+    return tempArray;
+
+}
+
+console.log(fromStringArrayToLenghtArray(stringsArray));
+
+// 6) mapping function che prende in input un array di strighe
 //    e restituisce le stringhe in formato camelCase
 
-// // array di stringhe
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+function toFirstCase(selectedWord){
+    const firstChar = selectedWord[0];
+    const firstCharUpper = firstChar.toUpperCase();
+    const restOfTheString = selectedWord.slice(1);
+    return firstCharUpper + restOfTheString;
+}
 
-// // array vuoto dove pushare le stringhe in formato camelCase
-// const camelCaseArray = [];
+function toCamelCase(selectedString){
 
-// // ciclo for per iterare sull'array di stringhe
-// for (let i = 0; i < stringsArray.length; i++) {
-//   // trasformo la stringa in minuscolo e la divido in un array di parole
-//   let string = stringsArray[i].toLowerCase().split(' ');
-//   // ciclo for per iterare sull'array di parole
-//   for (let j = 0; j < string.length; j++) {
-//     // trasformo la prima lettera della parola in maiuscolo e concateno il resto della parola
-//     string[j] = string[j].charAt(0).toUpperCase() + string[j].slice(1);
-//   }
-//   // pusho la parola in formato camelCase nell'array vuoto
-//   camelCaseArray.push(string.join(''));
-// }
+    const lowerString = selectedString.toLowerCase();
+    const wordsArray = lowerString.split(' ');
+    if (wordsArray.length === 1) {
+        return lowerString;
+    }
+    
+    let camelString = '';
+    for (let i = 0; i < wordsArray.length; i++) {
+        const element = wordsArray[i];
+        if (i === 0) {
+            camelString += element;
+        } else {
+            camelString += toFirstCase(element);
+        }
+    }
 
-// console.log(camelCaseArray); // ["23", "Pippo", "Pluto", "LaCasaBlu", "Osvaldo", "", "Porchetta"]
+    return camelString;
+}
+
+function toCamelCaseAll(arrayOfStrings){
+    const tempArray = [];
+
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+
+        const element = arrayOfStrings[i];
+        
+        const newElement = toCamelCase(element);
+        
+        tempArray.push(newElement);
+    }
+
+    return tempArray;
+}
+
+console.log(toCamelCaseAll(stringsArray));
 
 // 7) filter function che prende in input un array di stringhe
 //    e restituisce solo quelle più lunghe di tre caratteri
 
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
-// const filteredArray = [];
+function removeShorterThan3Chars(arrayOfStrings){
 
-// for (let i = 0; i < stringsArray.length; i++) {
-//   if (stringsArray[i].length > 3) {
-//     filteredArray.push(stringsArray[i]);
-//   }
-// }
+    const tempArray = [];
 
-// console.log(filteredArray); // ["PIPPO", "pluto", "la CASA blu", "Osvaldo", "porchetta"]
+    for (let i = 0; i < arrayOfStrings.length; i++) {
 
-// 8) filter function che prende in input un array di stringhe
+        const element = arrayOfStrings[i];
+        
+        //inserire il codice quì
+        if (element.length > 3) {
+           tempArray.push(element) 
+        }
+        
+    }
+
+    return tempArray;
+
+}
+
+console.log(removeShorterThan3Chars(stringsArray));
+
+// 8) filter function che prende in input un array di strighe
 //    e restituisce solo quelle che contengono la lettera 'p'
 
-// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
-// const filteredArray = [];
-// for (let i = 0; i < stringsArray.length; i++) {
-//   if (stringsArray[i].indexOf('p') !== -1) {
-//     filteredArray.push(stringsArray[i]);
-//   }
-// }
-// console.log(filteredArray);
+function removePEnemies(arrayOfStrings){
+
+    const tempArray = [];
+
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+
+        const element = arrayOfStrings[i];
+        
+        //inserire il codice quì
+        if (element.toLowerCase().includes('p')) {
+           tempArray.push(element) 
+        }
+        
+    }
+
+    return tempArray;
+
+}
+
+console.log(removePEnemies(stringsArray));
 
 // 9) filter function che prende in input un array di numeri
 //    e restituisce i positivi divisibili per 3
 
-// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-// let result = [];
+function keepPositiveAndDivisibleBy3(arrayOfNumbers){
 
-// for (let i = 0; i < numbersArray.length; i++) {
-//     if (numbersArray[i] > 0 && numbersArray[i] % 3 === 0) {
-//         result.push(numbersArray[i]);
-//     }
-// }
+    const tempArray = [];
 
-// console.log(result);
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+
+        const element = arrayOfNumbers[i];
+        
+        //inserire il codice quì
+        if (element > 0 && element % 3 === 0) {
+           tempArray.push(element) 
+        }
+        
+    }
+
+    return tempArray;
+
+}
+
+console.log(keepPositiveAndDivisibleBy3(numbersArray));
 
 // 10) fare una copia della home del sito di AXIA FORMAZIONE
+
+
+console.log(stringsArray.indexOf('taralluccio'));
