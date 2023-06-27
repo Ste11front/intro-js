@@ -42,3 +42,5 @@ console.log('Prova');
 // } else {
 //     console.log('Non è nemmeno un numero!');
 // }
+
+// Labstraction: code-wars exercise.js / INtrojs main varie
