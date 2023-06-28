@@ -286,7 +286,7 @@ function toLowerCaseAll(arrayOfStrings){
 
 //console.log(toLowerCaseAll(stringsArray));
 
-// 5) mapping function che prende in input un array di strighe
+// 5) mapping function che prende in input un array di stringhe
 //    e restituisce un array di numeri con le lunghezze delle stringhe
 
 function fromStringArrayToLenghtArray(arrayOfStrings){
