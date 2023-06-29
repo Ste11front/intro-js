@@ -1,6 +1,6 @@
-// const studente = {nome: 'Damiano,', anno: 1993, sposato: false};
+// console.log('oggettiiiii!')
 
-// console.log(studente);
+// const studente = {nome: 'Damiano', anno: 1993, sposato: false};
 
 // console.log(studente.nome);
 
@@ -10,22 +10,29 @@
 
 // console.log(studente);
 
-// console.log(studente.conto);
+// console.log(studente.conto)
 
 // console.log(Object.keys(studente)); // tutte le etichette
 // console.log(Object.values(studente)); // tutti i valori
 
+
 // for (const key in studente) {
-//     const value = studente [key] 
+//     const value = studente[key];
 //     console.log(key, value);
+// }
+
+// for (let i = 0; i < Object.keys(studente).length; i++) {
+//     const key = Object.keys(studente)[i];
+//     const value = studente[key];
 // }
 
 const studente2 = {
     name: 'Manuela',
-    yob: '1988',
+    yob: 1988,
     isMarried: false,
-    marks: [8, 9, 6, 8, 7],
-    dog:{
+    address: 'Genova',
+    marks: [8, 9, 7, 8, 10],
+    dog: {
         name: 'Nala',
         breed: 'lupo cecoslovacco',
         yob: 2017
@@ -34,73 +41,87 @@ const studente2 = {
 
 console.log(studente2);
 
-function calcateAge(student) {
-    
+
+function calculateAge(student){
+
     const actualYear = new Date().getFullYear();
-    
+
     const age = actualYear - student.yob;
 
     return age;
 
 }
 
-console.log(calcateAge(studente2));
+
+console.log(calculateAge(studente2));
+
 
 const studente3 = {
     name: 'Cesare',
-    yob: '2003',
+    yob: 2003,
     isMarried: false,
-    marks: [9, 9, 8, 6, 7],
-    dog:{
+    address: 'Genova',
+    marks: [9, 9 ,7, 8, 6],
+    dog: {
         name: 'Luna',
-        breed: 'dobberman',
+        breed: 'bull terrier',
         yob: 2016
     }
 }
 
-console.log(studente3);
+console.log(calculateAge(studente3));
 
-function calcateAge(student) {
-    
-    const actualYear = new Date().getFullYear();
-    
-    const age = actualYear - student.yob;
-
-    return age;
-
-}
-
-console.log(calcateAge(studente3));
 
 const studente4 = {
     name: 'Stefano',
-    yob: '1998',
+    yob: 1998,
     isMarried: false,
-    marks: [8, 5, 6, 10, 7],
+    address: 'Genova',
+    marks: [9, 10, 6, 8, 6],
     dog: null
 }
 
-console.log(studente4);
 
-function calcateAge(student) {
-    
-    const actualYear = new Date().getFullYear();
-    
-    const age = actualYear - student.yob;
+console.log(calculateAge(studente4));
 
-    return age;
+
+function calculateDogAge(student){
+
+    if(student.dog){
+        const actualYear = new Date().getFullYear();
+
+        const dogAge = (actualYear - student.dog.yob) * 7;
+    
+        return dogAge;
+
+    } else {
+
+        return -1;
+
+    }
+
 
 }
 
-console.log(calcateAge(studente4));
+console.log(calculateDogAge(studente2));
+console.log(calculateDogAge(studente3));
+console.log(calculateDogAge(studente4));
 
-function caculateMean(student) {
-    let  sum = 0;
+
+function calculateMean(student){
+
+    let sum = 0;
+
     for (const mark of student.marks) {
-        sum += marks;
-}
-const mean = sum/student.mark.lenght;
-return mean;
+        sum += mark;
+    }
+    
+    const mean = sum/student.marks.length;
+
+    return mean;
+
 }
 
-console.log(caculateMean(studente3));
+console.log(calculateMean(studente2));
+console.log(calculateMean(studente3));
+console.log(calculateMean(studente4));
