@@ -335,113 +335,317 @@
 
 // ESERCIZI-------------------------------------------------
 
-const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+// // 1) mapping function che prende in input un array di numeri
+// //    e restituisce un array con tutti i numeri diminuiti di uno
+
+// function minusOneAll(element) {
+//     // const newElement = element - 1;
+//     // return newElement;
+//     return element - 1;
+// }
+// console.log(numbersArray.map(minusOneAll));
+
+// console.log(numbersArray.map(element => element - 1)); // versione Lambda
+
+// // 2) mapping function che prende in input un array di numeri
+// //    e restituisce un array con i il valore assoluto dei numeri
+
+// function absoluteAll(element) {
+//     // const newElement = Math.abs(element);
+//     // return newElement;
+//     return Math.abs(element);
+// }
+// console.log(numbersArray.map(absoluteAll));
+
+// console.log(numbersArray.map(element => Math.abs(element))); // versione Lambda
+
+// // 3) mapping function che prende in input un array di numeri
+// //    e restituisce un array di stringhe con scritto 'PARI' se il numero
+// //    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+
+// function arrayToEvenOrOddStrings(element) {
+//     // let newElement = element;
+//     // if (element % 2 === 0) {
+//     //     newElement = 'PARI';
+//     // } else {
+//     //     newElement = 'DISPARI';
+//     // }
+//     // return newElement;
+//     if (element % 2 === 0) {
+//         return 'PARI';
+//     }
+//     return 'DISPARI';
+// }
+// console.log(numbersArray.map(arrayToEvenOrOddStrings));
+
+// console.log(numbersArray.map(element => element % 2 === 0 ? 'PARI' : 'DISPARI')); // versione Lambda
+
+// // 4) mapping function che prende in input un array di stringhe
+// //    e le restituisce tutte minuscole
+
+// function toLowerCaseAll(element) {
+//     // const newElement = element.toLowerCase();
+//     // return newElement;
+//     return element.toLowerCase()
+// }
+// console.log(stringsArray.map(toLowerCaseAll));
+
+// console.log(stringsArray.map(element => element.toLowerCase())); // versione Lambda
+
+// // 5) mapping function che prende in input un array di stringhe
+// //    e restituisce un array di numeri con le lunghezze delle stringhe
+
+// function fromStringArrayToLenghtArray(element) {
+//     return element.length;
+// }
+// console.log(stringsArray.map(fromStringArrayToLenghtArray));
+
+// console.log(stringsArray.map(element => element.length)); // versione Lmbda
+
+// // 7) filter function che prende in input un array di stringhe
+// //    e restituisce solo quelle più lunghe di tre caratteri
+
+// function removeShorterThan3Chars(element) {
+//     // if (element.length > 3) {
+//     //     return true;
+//     // }
+//     // return false;
+//     return element.length > 3;
+// }
+// console.log(stringsArray.filter(removeShorterThan3Chars));
+
+// console.log(stringsArray.filter(element => element.length > 3)); // versione Lambda
+
+// // 8) filter function che prende in input un array di stringhe
+// //    e restituisce solo quelle che contengono la lettera 'p'
+
+// function removePEnemies(element){
+//     if (element.toLowerCase().includes('p')) {
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(stringsArray.filter(removePEnemies));
+
+// console.log(stringsArray.filter(element => element.toLocaleLowerCase().includes('p'))); // versione Lambda
+
+// // 9) filter function che prende in input un array di numeri
+// //    e restituisce i positivi divisibili per 3
+
+// function keepPositiveAndDivisibleBy3(element) {
+//     if (element > 0 && element % 3 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(numbersArray.filter(keepPositiveAndDivisibleBy3));
+
+// console.log(numbersArray.filter(element => element > 0 && element % 3 === 0)); // versione Lambda
+
+// // 10) reduce function che dato un array di stringhe somma tutte le lunghezze
+
+// function sumLenght(acc, curr) {
+//     return acc + curr.length;
+// }
+// console.log(stringsArray.reduce(sumLenght, 0));
+
+// console.log(stringsArray.reduce((a, c) => a + c.length, 0)); // versione Landa
+
+// // 11) reduce function che dato un array di stringhe somma le lunghezze delle ultime 3
+
+// function sumLenghtIfLast3(acc, curr, index, originalArray) {
+//     if (index >= originalArray.length - 3) {
+//         return acc + curr.length;
+//     }
+//     return acc;
+// }
+// console.log(stringsArray.reduce(sumLenghtIfLast3, 0));
+ 
+// console.log(stringsArray.reduce((a, c, i, o) => i >= o.length - 3 ? a + c.length : a, 0)); // versione Lambda
+
+
+//SORTING------------------------------------------------
+
+//let numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+//const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+
+// function compareAscendingNumbers(n1, n2){
+//     if (n1 < n2){
+//         return -1;
+//     } else if (n1 > n2){
+//         return +1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// function compareAscendingNumbers2(n1, n2){
+//     return n1 - n2
+// }
+
+// function compareDescendingNumbers(n1, n2){
+//     if (n1 < n2){
+//         return +1;
+//     } else if (n1 > n2){
+//         return -1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// function compareDescendingNumbers2(n1, n2){
+//     return n2 - n1;
+// }
+
+
+
+// numbersArray.sort((n1, n2) => n1 - n2)
+
+// console.log(numbersArray);
+
+
+// stringsArray.sort((s1, s2) => s1.localeCompare(s2))
+
+// console.log(stringsArray)
+
+// const student1 = {
+//     name: 'manuela',
+//     yob: 1988,
+//     marks: [10, 8, 7, 5]
+// }
+
+// const student2 = {
+//     name: 'damiano',
+//     yob: 1993,
+//     marks: [9, 8, 7, 10]
+// }
+
+// const student3 = {
+//     name: 'cesare',
+//     yob: 2003,
+//     marks: [7, 8, 7, 6]
+// }
+
+// const student4 = {
+//     name: 'isabella',
+//     yob: 1996,
+//     marks: [10, 8, 9, 9]
+// }
+
+// const student5 = {
+//     name: 'stefania',
+//     yob: 1996,
+//     marks: [9, 4, 7, 6]
+// }
+
+// const student6 = {
+//     name: 'ares',
+//     yob: 1993,
+//     marks: [10, 10, 10, 10]
+// }
+
+// const student7 = {
+//     name: 'stefania',
+//     yob: 2000,
+//     marks: [10, 10, 9, 10]
+// }
+
+// const student8 = {
+//     name: 'cesare',
+//     yob: 2003,
+//     marks: [9, 9, 9, 9]
+// }
+
+
+// const students = [student1, student2, student3, student4, student5, student6, student7, student8];
+
+
+// function compareStudentsByNameAscending(s1, s2){
+//     return s1.name.localeCompare(s2.name);
+// }
+
+// function compareStudentsByYOBDescending(s1, s2){
+//     return s2.yob - s1.yob;
+// }
+
+// function compareStudentsByNameAndYear(s1, s2){
+//     if(s1.name.localeCompare(s2.name) === 0){
+//         return s2.yob - s1.yob;
+//     } else {
+//         return s1.name.localeCompare(s2.name);
+//     }
+// }
+
+// function calculateMean(arrayOfNumber){
+//     const sumOfArray = arrayOfNumber.reduce((a, c) => a + c);
+//     const mean = sumOfArray / arrayOfNumber.length;
+//     return mean;
+// }
+
+// function compareByStudentMarksMeanDescending(s1, s2){
+//     return calculateMean(s2.marks) - calculateMean(s1.marks);
+// }
+
+// function compareStudentsByNameYearAndMean(s1, s2){
+//     if (s1.name.localeCompare(s2.name) === 0) {
+//         if(s2.yob - s1.yob === 0){
+//             return calculateMean(s2.marks) - calculateMean(s1.marks);
+//         } else {
+//             return s2.yob - s1.yob;
+//         }
+//     } else {
+//         return s1.name.localeCompare(s2.name);
+//     }
+// }
+
+// students.sort(compareStudentsByNameYearAndMean);
+
+// console.log(students);
+
+//FIND----------------------------------------------------
+
 const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
-// 1) mapping function che prende in input un array di numeri
-//    e restituisce un array con tutti i numeri diminuiti di uno
 
-function minusOneAll(element) {
-    const newElement = element - 1;
-    return newElement;
-}
-console.log(numbersArray.map(minusOneAll));
-
-console.log(numbersArray.map(element => element - 1));
-
-// 2) mapping function che prende in input un array di numeri
-//    e restituisce un array con i il valore assoluto dei numeri
-
-function absoluteAll(element) {
-    const newElement = Math.abs(element);
-    return newElement;
-}
-console.log(numbersArray.map(absoluteAll));
-
-console.log(numbersArray.map(element => Math.abs(element)));
-
-// 3) mapping function che prende in input un array di numeri
-//    e restituisce un array di stringhe con scritto 'PARI' se il numero
-//    corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
-
-function arrayToEvenOrOddStrings(element) {
-    let newElement = element;
-    if (element % 2 === 0) {
-        newElement = 'PARI';
-    } else {
-        newElement = 'DISPARI';
-    }
-    return newElement;
-}
-console.log(numbersArray.map(arrayToEvenOrOddStrings));
-
-console.log(numbersArray.map(element => element % 2 === 0 ? 'PARI' : 'DISPARI'));
-
-// 4) mapping function che prende in input un array di stringhe
-//    e le restituisce tutte minuscole
-
-function toLowerCaseAll(element) {
-    const newElement = element.toLowerCase();
-    return newElement;
-}
-console.log(stringsArray.map(toLowerCaseAll));
-
-console.log(stringsArray.map(element => element.toLowerCase()));
-
-// 5) mapping function che prende in input un array di stringhe
-//    e restituisce un array di numeri con le lunghezze delle stringhe
-
-function fromStringArrayToLenghtArray(element) {
-    let newElement = element
-    if (element === undefined) {
-        newElement = - 1;
-    } else {
-        newElement = element.length;
-    }
-    return newElement
-}
-console.log(stringsArray.map(fromStringArrayToLenghtArray));
-
-console.log(stringsArray.map(element => element.length));
-
-// 7) filter function che prende in input un array di stringhe
-//    e restituisce solo quelle più lunghe di tre caratteri
-
-function removeShorterThan3Chars(element) {
+function isGreaterThan3Chars(element){
     if (element.length > 3) {
-        return true
-    } else {
-        return false
+        return true;
     }
+    return false;
 }
-console.log(stringsArray.filter(removeShorterThan3Chars));
 
-console.log(stringsArray.filter(element => element.length > 3));
+console.log(stringsArray.filter(isGreaterThan3Chars));
 
-// 8) filter function che prende in input un array di stringhe
-//    e restituisce solo quelle che contengono la lettera 'p'
+console.log(stringsArray.find(isGreaterThan3Chars));
 
-function removePEnemies(element){
-if (element.toLowerCase().includes('p')) {
-    return true
-    } else {
-        return false
+function containsCASA(element){
+    if (element.includes('CASA')) {
+        return true;
     }
+    return false;
 }
-console.log(stringsArray.filter(removePEnemies));
 
-console.log(stringsArray.filter(element => element.toLocaleLowerCase().includes('p')));
+console.log(stringsArray.filter(containsCASA));
 
-// 9) filter function che prende in input un array di numeri
-//    e restituisce i positivi divisibili per 3
+console.log(stringsArray.find(containsCASA));
 
-function keepPositiveAndDivisibleBy3(element) {
-    if (element % 3 === 0) {
-        return true
-    } else {
-        return false
+
+
+
+//SOME----------------------------------------------------
+
+
+function isGreaterThan30Chars(element){
+    if (element.length > 30) {
+        return true;
     }
+    return false;
 }
-console.log(numbersArray.filter(keepPositiveAndDivisibleBy3));
 
-console.log(numbersArray.filter(element => element % 3 === 0));
+console.log(stringsArray.some(isGreaterThan3Chars));
+
+console.log(stringsArray.some(isGreaterThan30Chars));
