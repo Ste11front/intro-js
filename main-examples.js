@@ -188,6 +188,7 @@
 
 const test1 = ['pippo', 'pluto', 'qui', 'quo', 'qua', 'paperone'];
 
+//v1
 function onlyContainsPSum(arr) {
     const onlyContainsP = arr.filter(el => el.toLowerCase().includes('p'));
     const stringsLengthArray = onlyContainsP.map(el => el.length);
@@ -195,30 +196,30 @@ function onlyContainsPSum(arr) {
     return stringsLengthArraySum;
 } 
 console.log(onlyContainsPSum(test1));
-// v1
 
-function onlyContainsPSum(arr) {
-    const newArray = arr.filter(el => el.toLowerCase().includes('p')).map(el => el.length).reduce((acc, curr) => acc + curr, 0);
-    return newArray;
-} 
-console.log(onlyContainsPSum(test1));
 //v2
-
 function onlyContainsPSum(arr) {
-    return newArray = arr.filter(el => el.toLowerCase().includes('p')).map(el => el.length).reduce((acc, curr) => acc + curr, 0);
+    return arr.filter(el => el.toLowerCase()
+    .includes('p')).map(el => el.length)
+    .reduce((acc, curr) => acc + curr, 0);
 } 
 console.log(onlyContainsPSum(test1));
-//v3
 
-function onlyContainsPSum(arr) {
-    const acc = 0;
+//v3
+function onlyContainsPSum(arr){
+    const acc = [];
     for (const element of arr) {
         if (element.toLowerCase().includes('p')) {
-            const sum = element.length.reduce((acc, curr) => acc + curr, 0);
+          const sum = element.length;
+          acc.push(sum);  
         }
+
     }
+    return acc.reduce((acc, curr) => acc + curr, 0);
 }
-//v4 non completa
+console.log(onlyContainsPSum(test1));
+
+//v4
 
 //2) Dato un array di numeri, moltiplicarli per il loro indice
 //   rimuovere quelli maggiori di 1000
@@ -226,7 +227,65 @@ function onlyContainsPSum(arr) {
 
 const test2 = [100, 10, 24, -20, 300, 6, 100, 300];
 
+//v1
+function result(arr) {
+    const prima = arr.map((num, index) => num * index);
+    const seconda = prima.filter(num => num <= 1000);
+    const terza = seconda.reduce((acc, curr) => acc + ';' + curr);
+    return terza;
+} 
+console.log(result(test2));
+
+//v2
+function result(arr) {
+    return arr.map((num, index) => num * index)
+    .filter(num => num <= 1000)
+    .reduce((acc, curr) => acc + ';' + curr);
+}    
+console.log(result(test2));
+
+//v3
+function result(arr){
+    const acc = [];
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i] * i;
+        if (num <= 1000) {
+            acc.push(num);
+        }
+    }
+    return acc.reduce((acc, curr) => acc + ';' + curr);
+}
+console.log(result(test2));
+
 //3) Data una stringa, eliminare tutte le parole più corte di 4 caratteri
 //   e restituirle in un array ordinate per lunghezza dalla più lunga
 
 const test3 = 'ho fatto il bucato ieri sera ma si è colorato tutto di violetto';
+
+//v1
+function parole(arr) {
+    const prima = arr.split(' ');
+    const seconda = prima.filter(parola => parola.length >= 4);
+    const terza = seconda.sort((a, b) => b.length - a.length);
+    return terza;
+} 
+console.log(parole(test3));
+
+//v2
+function parole(arr) {
+return arr.split(' ')
+.filter(parola => parola.length >= 4)
+.sort((a, b) => b.length - a.length);
+}
+console.log(parole(test3));
+
+//v3
+const element = test3.split(' ');
+const paroleLunghe = [];
+for (let i = 0; i < element.length; i++) {
+  if (element[i].length >= 4) {
+    paroleLunghe.push(element[i]);
+  }
+}
+paroleLunghe.sort((a, b) => b.length - a.length);
+console.log(paroleLunghe);
