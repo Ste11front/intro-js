@@ -181,7 +181,6 @@
 // console.log(convertToNumbersAndSumAll4(testString));
 
 
-// Con tutti e 4 i procedimenti
 //1)  Dato un array di stringhe, 
 //   eliminare tutte quelle che non contengono la lettera p
 //   e ritornare la somma delle lunghezze delle rimanenti
@@ -257,6 +256,8 @@ function result(arr){
 }
 console.log(result(test2));
 
+//v4
+
 //3) Data una stringa, eliminare tutte le parole più corte di 4 caratteri
 //   e restituirle in un array ordinate per lunghezza dalla più lunga
 
@@ -289,3 +290,28 @@ for (let i = 0; i < element.length; i++) {
 }
 paroleLunghe.sort((a, b) => b.length - a.length);
 console.log(paroleLunghe);
+
+//v4
+
+// cap 4
+function sum(numbers){
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+console.log();
+
+// cap4 es 2
+
+const testArray = ['io', 'me', 'medesimo'];
+
+function reverseArray(arr) {
+    const tempArray = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const element = arr[i];
+        tempArray.push(element);
+    }
+    return tempArray;
+}
+
+const newArray = reverseArray(testArray);
+console.log(newArray);
+console.log(testArray);
