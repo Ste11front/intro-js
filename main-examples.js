@@ -293,25 +293,117 @@ console.log(paroleLunghe);
 
 //v4
 
-// cap 4
-function sum(numbers){
-    return numbers.reduce((acc, curr) => acc + curr, 0);
-}
-console.log();
 
-// cap4 es 2
+//TYPEOF------------------------------------------------------------
 
-const testArray = ['io', 'me', 'medesimo'];
+// const pippo = 12;
+// const pluto = "ciao mondo";
+// const paperino = true;
+// const qui = undefined;
+// const quo = null;
+// const qua = NaN;
 
-function reverseArray(arr) {
+// const clarabella = { name: "isabella", yob: 1996 };
+// const orazio = ["ciao", "hello"];
+
+// console.log(typeof pippo);
+// console.log(typeof pluto);
+// console.log(typeof paperino);
+// console.log(typeof qui);
+// console.log(typeof quo);
+// console.log(typeof qua);
+// console.log(qua === NaN);
+// console.log(isNaN(qua));
+
+// console.log(typeof clarabella);
+// console.log(typeof orazio);
+// console.log(clarabella);
+// console.log(orazio);
+
+//CAP 4 ES 1----------------------------------------------------
+
+// function range(start, end, step = 1, reversed = false){
+//     const tempArray = [];
+//     if (reversed) {
+//         if (start < end){
+//             return tempArray;
+//         }
+//         for (let i = start; i >= end; i -= step) {
+//             tempArray.push(i);
+//         }
+//     } else {
+//         if (end < start){
+//             return tempArray;
+//         }
+//         for (let i = start; i <= end; i += step) {
+//             tempArray.push(i);
+//         }
+//     }
+//     return tempArray;
+// }
+
+// function range(start, end) {
+//     const tempArray = [];
+
+//     if (end < start) {
+//         return tempArray;
+//     }
+//     for (let i = start; i <= end; i++) {
+//         tempArray.push(i);
+//     }
+
+//     return tempArray;
+// }
+
+// console.log(range(-5, 50));
+
+
+// function sum(numbers){
+//     return numbers.reduce((acc, curr) => acc + curr, 0);
+// }
+
+// console.log(sum(range(0, 10)))
+
+
+//CAP 4 ES 2----------------------------------------------------
+
+
+let testArray = ['qui', 'quo', 'qua'];
+
+
+function reverseArray(arr){
+
     const tempArray = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
+
+    for (let i = arr.length - 1; i >= 0 ; i--) {
         const element = arr[i];
         tempArray.push(element);
     }
+
     return tempArray;
 }
 
-const newArray = reverseArray(testArray);
-console.log(newArray);
+
+// const newArray = reverseArray(testArray);
+// console.log(newArray);
+// console.log(testArray);
+
+testArray = reverseArray(testArray);
 console.log(testArray);
+
+
+// function reverseArrayInPlace(arr){
+
+//     const cloneArray = [...arr]
+//     let j = 0;
+//     for (let i = cloneArray.length - 1; i >= 0 ; i--) {
+//         const element = cloneArray[i];
+//         arr[j] = element;
+//         j++;
+//     }
+
+// }
+
+// reverseArrayInPlace(testArray);
+
+// console.log(testArray);
